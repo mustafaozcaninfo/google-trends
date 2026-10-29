@@ -106,7 +106,17 @@ def run_motor_scan(
                 scan_seeds.append(kw)
 
     ac_stats: dict = {}
-    if scan_mode == "printable":
+    if scan_mode == "alpha_harvest":
+        from kwscraper_bridge import harvest_alpha_rows
+
+        ac_rows, ac_stats = harvest_alpha_rows(
+            scan_seeds,
+            lang=hl,
+            country=gl,
+            min_words=min_words,
+            sleep_between=0.15,
+        )
+    elif scan_mode == "printable":
         modifier_seeds = list(dict.fromkeys([*scan_seeds, *PRINTABLE_ANCHOR_SEEDS]))
         ac_rows, ac_stats = _discover_modifier(
             ac,

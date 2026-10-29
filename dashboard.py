@@ -264,14 +264,15 @@ with st.sidebar:
     )
     scan_mode = st.selectbox(
         "Keşif modu",
-        ["deep", "deep_plus", "printable", "quick"],
+        ["deep", "deep_plus", "printable", "alpha_harvest", "quick"],
         format_func=lambda x: {
             "deep": "Derin — A–Z + soru önekleri",
             "deep_plus": "Derin+ — A–Z + 2. dalga",
             "printable": "Printable/PDF — 2026–2027 + indirilebilir niyet",
+            "alpha_harvest": "Otomatik A–Z (kwscraper) — trend seed batch",
             "quick": "Hızlı — seed genişletme",
         }[x],
-        index=0,
+        index=3 if _CLOUD else 0,
     )
     min_words = st.slider("Min kelime (long-tail)", 3, 8, 4)
     use_trending_seeds = st.checkbox("Trending'i ek seed yap", value=False)
