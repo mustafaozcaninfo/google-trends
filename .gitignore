@@ -1,0 +1,12 @@
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+.cache/
+downloads/
+*.sqlite3
+.env
+.env.*
+.streamlit/secrets.toml
+agent-tools/

@@ -1,0 +1,23 @@
+[theme]
+base = "dark"
+primaryColor = "#5B9FD4"
+backgroundColor = "#0F1419"
+secondaryBackgroundColor = "#1A2332"
+textColor = "#E8EDF4"
+font = "sans serif"
+
+[theme.sidebar]
+backgroundColor = "#121A24"
+secondaryBackgroundColor = "#1A2332"
+textColor = "#E8EDF4"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false
+
+[client]
+# Hide deploy/rerun chrome; footer hidden via dashboard_styles.css
+toolbarMode = "viewer"
+showErrorDetails = "stacktrace"
