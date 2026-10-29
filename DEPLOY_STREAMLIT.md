@@ -39,6 +39,7 @@ FC_CLOUD = "1"
 |---------|--------|
 | Trending RSS + landing | Yes |
 | Autocomplete / printable scan | Yes (rate limits apply) |
+| **alpha_harvest (kwscraper A–Z)** | Yes — default scan mode on Cloud; prefer 1–2 seeds per run |
 | GSC upload | Yes (session; re-upload after sleep) |
 | Sitemap slug refresh | Yes |
 | Full trending CSV (Chrome) | **No** |
