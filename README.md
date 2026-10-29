@@ -23,6 +23,15 @@ streamlit run app.py         # tüm Trends modları
 
 Tarayıcı otomatik açılır (genelde http://localhost:8501).
 
+### Streamlit Community Cloud (bedava, RSS modu)
+
+Public deploy: see [DEPLOY_STREAMLIT.md](DEPLOY_STREAMLIT.md). Main file: **`dashboard.py`**.
+
+```bash
+export FC_CLOUD=1   # local parity with Cloud
+streamlit run dashboard.py --server.port 8502
+```
+
 ## Özellikler
 
 - **FC News Radar (`dashboard.py`)** — US autocomplete long-tail keşfi (seed + boşluk + **a–z** + how/what/when…) + Trends + slug gap
